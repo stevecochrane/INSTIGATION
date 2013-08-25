@@ -9,9 +9,9 @@ package {
 
 		public function INSTIGATION():void {
 
-			FlxG.debug = true;
-/* 			super(256, 240, TitleState, 2, 30, 30); */
-			super(256, 240, PlayState, 2, 30, 30);
+/* 			FlxG.debug = true; */
+			super(256, 240, TitleState, 2, 30, 30);
+/* 			super(256, 240, PlayState, 2, 30, 30); */
 
 /*             FlxG.visualDebug = true; */
 

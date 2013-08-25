@@ -75,7 +75,7 @@ package {
             stayAtThisX = X;
 
             acceleration.y = 9999;
-            maxVelocity.y = 50;
+            maxVelocity.y = Globals.blockBaseMaxVeloY;
             drag.y = 9999;
 
             acceleration.x = 0;
@@ -297,6 +297,15 @@ package {
                     y += 48;
 
                 }
+            }
+        }
+
+        public function increaseFallSpeed():void {
+
+            if (!isSetDown) {
+
+                maxVelocity.y = Globals.blockBaseMaxVeloY;
+
             }
         }
 

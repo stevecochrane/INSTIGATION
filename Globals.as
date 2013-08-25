@@ -6,6 +6,8 @@ package {
 
         static public var blockRecord:Array = new Array();
 
+        static public var blockBaseMaxVeloY:int = 50;
+
         static public var col0XPos:int = 96;
         static public var col1XPos:int = 112;
         static public var col2XPos:int = 128;

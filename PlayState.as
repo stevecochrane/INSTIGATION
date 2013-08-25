@@ -110,7 +110,7 @@ package {
             fallingRowTimer += FlxG.elapsed;
             currentLevelTimer += FlxG.elapsed;
 
-            if (testingTimer >= rocketInterval && fallingRowTimer <= 9) {
+            if (testingTimer >= rocketInterval && fallingRowTimer <= 9.5) {
 //                FlxG.log("launching a rocket");
 
                 rocketFromEarth.play("launch");
@@ -131,8 +131,17 @@ package {
                 FlxG.log("Level up!");
                 currentLevelTimer = 0;
                 currentLevel += 1;
-                rocketInterval -= 0.25;
+
+                if (rocketInterval > 0.75) {
+                    rocketInterval -= 0.75;
+                }
+
                 currentLevelText.text = "Level " + currentLevel;
+
+                if (Globals.blockBaseMaxVeloY < 300) {
+                    Globals.blockBaseMaxVeloY += 20;
+                }
+                blockGroup.callAll("increaseFallSpeed");
             }
 
             FlxG.collide(planetSurface, player);
@@ -148,6 +157,7 @@ package {
             }
 
 
+/*
             //  DEBUG KEYS
 
             if (FlxG.keys.justPressed("G")) {
@@ -187,12 +197,11 @@ package {
                 }
             }
 
-/*
-            if (FlxG.keys.justPressed("V")) {
-                (blockSparkGroup.recycle(BlockSpark) as BlockSpark).spawn(16, 48);
-            }
-*/
+//            if (FlxG.keys.justPressed("V")) {
+//                (blockSparkGroup.recycle(BlockSpark) as BlockSpark).spawn(16, 48);
+//            }
             //  END DEBUG KEYS
+*/
 
             if (!player.flickering) {
     
@@ -449,10 +458,11 @@ package {
 
 //            FlxG.log("block hit player!");
 
-            if (!player.flickering && block.y < player.y) {
+            if (!player.flickering && block.y < player.y + 4) {
 
-                player.flicker(1);
+                player.flicker(2);
                 player.y -= 16;
+                player.currentRow -= 1;
                 FlxG.play(Assets.audCurses);
 
             }
@@ -609,7 +619,7 @@ package {
 
                             }
 
-                            addToScore(500);
+                            addToScore(100 * currentLevel);
                             player.updateYPos();
                             FlxG.play(Assets.audBlockClear);
 
@@ -696,7 +706,7 @@ package {
                 }
 
                 if (verticalMatchFound) {
-                    addToScore(500);
+                    addToScore(100 * currentLevel);
                     player.updateYPos();
                     FlxG.play(Assets.audBlockClear);
 
@@ -708,7 +718,7 @@ package {
 
         public function addToScore(numberToAdd:int):void {
 
-            FlxG.score += 500;            
+            FlxG.score += numberToAdd;
             scoreText.text = addZeros({ inputNumber:FlxG.score, stringLength:8 }).output;
 
         }
