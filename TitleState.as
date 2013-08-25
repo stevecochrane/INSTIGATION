@@ -131,7 +131,7 @@ package {
         public function frameCheck(animationName:String, frameNumber:uint, frameIndex:uint):void {
             if (animationName == "launch" && frameIndex == 0) {
                 rocketFromEarth.play("idle");
-                (blockGroup.recycle(Block) as Block).spawn(Globals.col0XPos, -48, 0, blockSparkGroup, false);
+                (blockGroup.recycle(Block) as Block).spawn(Globals.col0XPos, -48, 3, blockSparkGroup, false);
 //                FlxG.log("Move on screen!");
             }
         }

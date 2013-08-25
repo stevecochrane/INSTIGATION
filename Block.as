@@ -86,8 +86,10 @@ package {
                 loadGraphic(Assets.imgBlock1, false, false, 16, 16);
             } else if (blockType == 2) {
                 loadGraphic(Assets.imgBlock2, false, false, 16, 16);
-            } else {
+            } else if (blockType == 3) {
                 loadGraphic(Assets.imgBlock3, false, false, 16, 16);
+            } else {
+                loadGraphic(Assets.imgBlock4, false, false, 16, 16);
             }
 
         }
@@ -226,8 +228,10 @@ package {
                 loadGraphic(Assets.imgBlock1, false, false, 16, 16);
             } else if (blockType == 2) {
                 loadGraphic(Assets.imgBlock2, false, false, 16, 16);
-            } else {
+            } else if (blockType == 3) {
                 loadGraphic(Assets.imgBlock3, false, false, 16, 16);
+            } else {
+                loadGraphic(Assets.imgBlock4, false, false, 16, 16);
             }
 
         }

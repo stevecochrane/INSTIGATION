@@ -346,8 +346,10 @@ package {
                                 player.holdingBlockType = 1;
                             } else if (Globals.blockRecord[player.currentRow + 1][player.currentCol] == 2) {
                                 player.holdingBlockType = 2;
-                            } else {
+                            } else if (Globals.blockRecord[player.currentRow + 1][player.currentCol] == 3) {
                                 player.holdingBlockType = 3;
+                            } else {
+                                player.holdingBlockType = 4;
                             }
 
 //                            FlxG.log("player.holdingBlockType = " + player.holdingBlockType);
@@ -427,7 +429,7 @@ package {
         public function getRandomBlockType():int {
 
             //  Returns a random integer between 1 and 3.
-            return FlxU.floor(FlxG.random() * 3) + 1;
+            return FlxU.floor(FlxG.random() * 4) + 1;
 
         }
 
@@ -460,7 +462,7 @@ package {
 
             if (!player.flickering && block.y < player.y + 4) {
 
-                player.flicker(2);
+                player.flicker(1);
                 player.y -= 16;
                 player.currentRow -= 1;
                 FlxG.play(Assets.audCurses);

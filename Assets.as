@@ -18,6 +18,7 @@ package {
         [Embed(source="assets/images/block-1.png")] static public var imgBlock1:Class;
         [Embed(source="assets/images/block-2.png")] static public var imgBlock2:Class;
         [Embed(source="assets/images/block-3.png")] static public var imgBlock3:Class;
+        [Embed(source="assets/images/block-4.png")] static public var imgBlock4:Class;
         [Embed(source="assets/images/block-spark.png")] static public var imgBlockSpark:Class;
         [Embed(source="assets/images/curses.png")] static public var imgCurses:Class;
         [Embed(source="assets/images/dotted-line.png")] static public var imgDottedLine:Class;

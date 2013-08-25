@@ -33,6 +33,7 @@ package {
             addAnimation("holding_block_1", [1]);
             addAnimation("holding_block_2", [2]);
             addAnimation("holding_block_3", [3]);
+            addAnimation("holding_block_4", [4]);
 
             play("idle");
 
@@ -167,8 +168,10 @@ package {
                     play("holding_block_1");
                 } else if (holdingBlockType == 2) {
                     play("holding_block_2");
-                } else {
+                } else if (holdingBlockType == 3) {
                     play("holding_block_3");
+                } else {
+                    play("holding_block_4");
                 }
             } else {
                 play("idle");
