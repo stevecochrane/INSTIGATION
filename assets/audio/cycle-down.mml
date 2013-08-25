@@ -1,0 +1,12 @@
+#TITLE Cycle Down
+#COMPOSER Steve Cochrane
+#MAKER 2013 Steve Cochrane
+
+@EP0 = { -4 }
+
+@v0 = { 10 9 8 7 6 5 4 3 2 1 0 }
+
+A t120
+
+A l4 o4 @02 @v0
+A EP0 b

@@ -1,0 +1,10 @@
+#TITLE Block Set Down
+#COMPOSER Steve Cochrane
+#MAKER 2013 Steve Cochrane
+
+@v0 = { 10 8 6 4 2 0 }
+
+A t120
+
+A l8 o2 @02 @v0
+A g

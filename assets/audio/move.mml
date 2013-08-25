@@ -1,0 +1,12 @@
+#TITLE Move
+#COMPOSER Steve Cochrane
+#MAKER 2013 Steve Cochrane
+
+@EP1 = { 2 }
+
+@v0 = { 2 2 1 1 0 }
+
+A t160
+
+A l32 o6 @02 @v0
+A EP1 c16 EPOF

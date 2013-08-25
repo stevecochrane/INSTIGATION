@@ -1,0 +1,13 @@
+#TITLE Block Lift
+#COMPOSER Steve Cochrane
+#MAKER 2013 Steve Cochrane
+
+@EP0 = { -2 }
+@EP1 = { 2 }
+
+@v0 = { 10 9 8 7 6 5 4 4 4 3 3 3 2 2 2 1 1 1 0 }
+
+A t160
+
+A l16 o4 @02 @v0
+A EP0 c16 EPOF > EP1 c4 EPOF

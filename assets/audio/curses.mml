@@ -1,0 +1,10 @@
+#TITLE Curses
+#COMPOSER Steve Cochrane
+#PROGRAMER 2013 Steve Cochrane
+
+@EP0 = { -90 }
+
+A t90
+
+A l4 o1 @00 v6
+A EP0 c EPOF
