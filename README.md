@@ -10,5 +10,6 @@ Match the trash blocks sent by the humans to stay alive as long as possible. Fal
 
 Good luck and thanks for playing!
 
-Game programmed with Flixel - http://flixel.org 
+Game programmed with Flixel - http://flixel.org
+
 Audio programmed with Shaun Inman's TextMate MML Bundle - http://shauninman.com/archive/2010/02/13/an_mml_bundle_for_textmate/
