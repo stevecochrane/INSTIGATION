@@ -98,7 +98,7 @@ package {
             FlxG.watch(this, "rocketInterval", "rocketInterval");
             FlxG.watch(FlxG, "score", "score");
 
-            FlxG.playMusic(Assets.audStageBGM, 0.5);
+            FlxG.playMusic(Assets.audStageBGM);
 
         }
 

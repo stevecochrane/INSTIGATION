@@ -1,0 +1,26 @@
+#TITLE Stage BGM
+#COMPOSER Steve Cochrane
+#MAKER 2013 Steve Cochrane
+
+@v0 = { 6 5 4 3 2 }
+@v1 = { 3 2 1 0 }
+
+@v2 = { 8 6 3 2 1 0 }
+@v3 = { 8 7 6 5 4 3 2 1 0 }
+
+ABD t120
+
+A l8 o5 @01 @v3
+A L
+A [r1]8
+A [[c c c r d d d r c c c r e g d r]3 c c c r d d d r c c c r e a g e]2
+A [[c e d r d g e r c e d r e g a r]3 c e d r d g e r c e d r e a g e]2
+
+B l16 o3 @02 @v3
+B L
+B [[c8 r8 e8 r8]2 c8 r8 e8 r8 g8 r8 a8 r8]2
+B [[d8 r8 g8 r8]2 d8 r8 g8 r8 a8 r8 > c8 < r8]2
+
+D l4 o1 @0 @v2
+D L
+D [@v2 b8 @v1 e8 @v3 e8 @v0 e16 e16 @v2 b8 @v1 e8 @v3 e8 @v1 e8]3 @v2 b8 @v1 e8 @v3 e8 @v0 e16 e16 @v2 b16 @v3 e16 e16 r16 @v3 b16 @v3 e16 e16 e16
