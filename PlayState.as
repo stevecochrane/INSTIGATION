@@ -38,6 +38,8 @@ package {
 			FlxG.worldBounds.height = FlxG.height;
 			FlxG.worldBounds.width = FlxG.width;
 
+            Globals.blockBaseMaxVeloY = 50;
+
             backgroundSprite = new FlxSprite(0, 0);
 			backgroundSprite.loadGraphic(Assets.imgBackground, false, false, 256, 240);
 
@@ -132,7 +134,9 @@ package {
                 currentLevelTimer = 0;
                 currentLevel += 1;
 
-                if (rocketInterval > 0.75) {
+                if (rocketInterval <= 1) {
+                    rocketInterval = 0.5;
+                } else {
                     rocketInterval -= 0.75;
                 }
 
